@@ -12,4 +12,11 @@
 `a[i].push_back(temp);`往后面塞进去一个数据
 
 `cout << a[I[i]].at(J[i]);`输出一个数据
-![我的设计](https://wx2.sinaimg.cn/mw690/006rgJELly1g75ygpa53uj31g6125tcd.jpg)
+
+指针 | 存的内容（变长数组）
+------- | -------
+a[0] | vector < int > 
+a[1] | vector < int >
+a[2] | vector < int >
+... | ... | 
+a[n] | vector < int >
