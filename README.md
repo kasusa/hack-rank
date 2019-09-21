@@ -20,3 +20,11 @@ a[1] | vector < int >
 a[2] | vector < int >
 ... | ... | 
 a[n] | vector < int >
+---
+## `getline()`
+C++ 函数 : getline 。
+
+此函数可读取整行，包括前导和嵌入的空格，并将其存储在字符串对象中。而`cin`一到空格就结束的
+
+`getline(cin, inputLine);`
+其中 cin 是正在读取的输入流，而 inputLine 是接收输入字符串的 string 变量的名称
