@@ -39,3 +39,14 @@ cin >> doubleNumber;
 cin.ignore();  //ignores an end of line character <<<<
 getline(cin, stringName);
 ```
+---
+## double 输出精度:
+```
+    double ans = 15.123;
+    printf("%.0f",ans);  //output: 15
+    printf("%.1f",ans);  //output: 15.1
+    printf("%.2f",ans);  //output: 15.12
+    ...
+    printf("%f",ans);    //output: 15.123000
+
+```
