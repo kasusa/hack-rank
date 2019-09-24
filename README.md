@@ -1,5 +1,6 @@
-# 使用hack rank 学习和练习c++
-<<<<<<< HEAD
+# 使用hack rank 学习和练习
+---
+# `CPP`
 ## ` vector `
 * [o's blog](https://mropengate.blogspot.com/2015/07/cc-vector-stl.html)
 * [题目页面](https://www.hackerrank.com/challenges/variable-sized-arrays/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen)
@@ -49,4 +50,16 @@ getline(cin, stringName);
     ...
     printf("%f",ans);    //output: 15.123000
 
+```
+---
+# `Javascript`
+[hackrank day0 教学](https://www.hackerrank.com/challenges/js10-hello-world/topics/javascript-basics)
+## 变量命名方式
+```
+// Some valid identifiers are:
+x
+variable_name
+sum13
+_variable
+$variable
 ```
