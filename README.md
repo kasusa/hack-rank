@@ -1,5 +1,12 @@
 # 使用hack rank 学习和练习
 ---
+> `快速跳转位置`
+> 
+> [cpp](#/CPP)
+> 
+> [Javascript](#/Javascript)
+> 
+> [Java](#/Java)
 # `CPP`
 ## ` vector `
 * [o's blog](https://mropengate.blogspot.com/2015/07/cc-vector-stl.html)
@@ -63,3 +70,5 @@ sum13
 _variable
 $variable
 ```
+---
+# `Java`
