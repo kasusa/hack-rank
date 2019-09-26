@@ -1,11 +1,5 @@
 # 使用hack rank 学习和练习
----
-<<<<<<< Updated upstream
- `快速跳转位置`
- [cpp](#/"CPP")
- [Javascript](#/Javascript)
- [Java](#/Java)
-=======
+
 `快速跳转位置`==>
 [cpp](#CPP)
 [Javascript](#Javascript)
