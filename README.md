@@ -33,9 +33,9 @@ C++ 函数 : getline 。
 
 使用：
 
-`getline(cin, inputLine);`
-cin 是正在读取的输入流，而 inputLine 是接收输入字符串的 string 变量的名称
-
+`getline(cin, strName);`
+cin 是正在读取的输入流，而 strName 是接收输入字符串的 string 变量的名称
+## `cin` 和 `getline` 的混用
 `cin` 和 `getline()`最好不要混用，因为`cin`会留下一个\n，然后被`getline()`读取。
 
 不过也有办法可以应对，只要加一行如下代码：
