@@ -87,6 +87,10 @@ $variable
 ```
 下面是常用的scan方法，[这里](https://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html#method_summary)查看更多方法。
 ```
+scan.nextInt();//获取一个int类型的值
+scan.nextDouble();//获取一个double类型的值
+```
+```
  scan.next(); // returns the next token of input
  scan.hasNext(); // returns true if there is another token of input (false otherwise)
  scan.nextLine() // returns the next LINE of input
