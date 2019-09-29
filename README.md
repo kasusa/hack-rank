@@ -35,7 +35,7 @@ C++ 函数 : getline 。
 
 `getline(cin, strName);`
 cin 是正在读取的输入流，而 strName 是接收输入字符串的 string 变量的名称
-## `cin` 和 `getline` 的混用
+## `cin` 和 `getline()` 的混用
 `cin` 和 `getline()`最好不要混用，因为`cin`会留下一个\n，然后被`getline()`读取。
 
 不过也有办法可以应对，只要加一行如下代码：
@@ -54,6 +54,22 @@ getline(cin, stringName);
     ...
     printf("%f",ans);    //output: 15.123000
 
+```
+## `MAP`
+创建一个map：（这里创建一个名为`phoneBook`的map）,<人名,电话>的类型都是string
+```
+map <string,string> phoneBook ;
+```
+给phoneBook插入一些内容：
+```
+string name , tel;
+cin >> name;
+cin >> tel;
+phoneBook[name] = tel;
+```
+查询内容：
+```
+cout << Query << "=" << phoneBook[Query]<<endl;
 ```
 ---
 # `Javascript`
