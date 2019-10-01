@@ -4,6 +4,7 @@
 [cpp](#CPP) |
 [Javascript](#Javascript) |
 [Java](#Java) |
+[算法](#算法)
 # `CPP`
 ## ` vector `
 * [o's blog](https://mropengate.blogspot.com/2015/07/cc-vector-stl.html)
@@ -71,6 +72,28 @@ phoneBook[name] = tel;
 ```
 cout << Query << "=" << phoneBook[Query]<<endl;
 ```
+## `String` 
+[w3cschools介绍](https://www.w3schools.com/cpp/cpp_strings.asp)
+
+把int型转换成string类型
+```
+int i=11;
+string str= to_string(i);
+```
+获取string的长度
+```
+string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+cout << "The length of the txt string is: " << txt.length();
+```
+> 注意这里`txt.length()`好像是`unsigned`类型要和`int`比较的话最好转换一下
+> 
+直接访问字符串的字符：
+```
+string myString = "Hello";
+cout << myString[0]; // Outputs H
+cout << myString[1]; // Outputs e
+```
+输入到string的函数：[getline](#`getline()`)
 ---
 # `Javascript`
 [hackrank day0 教学](https://www.hackerrank.com/challenges/js10-hello-world/topics/javascript-basics)
@@ -122,4 +145,16 @@ Scanner scan = new Scanner(System.in); // open scanner
 String s = scan.next(); // read the next token and save it to 's'
 scan.close(); // close scanner
 System.out.println(s); // print 's' to System.out, followed by a new line
+```
+---
+# 算法
+base 10 -> base 2 的伪代码
+> 参考  `tutorials-cpp`/`day10` 
+```
+while(n > 0):
+    remainder = n%2;
+    n = n/2;
+    Insert remainder to front of a list or push onto a stack
+
+Print list or stack
 ```
