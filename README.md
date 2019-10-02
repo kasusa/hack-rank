@@ -158,3 +158,14 @@ while(n > 0):
 
 Print list or stack
 ```
+获取最大值（参考`day11 cpp`）：
+获取一组数字中的的时候，我一般这么做：
+```
+int biggest = INT_MIN; 
+for(_反正就是遍历循环)
+{
+    int temp = _获取值的函数(_各种参数);
+    if(biggest < temp)biggest = temp;
+}
+```
+> 注意：`biggest`设置为0的话，如果下面所有的值都是`负的`那么就会出问题！
