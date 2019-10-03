@@ -11,14 +11,37 @@
 * [题目页面](https://www.hackerrank.com/challenges/variable-sized-arrays/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen)
 * [c++中文网里的解释](https://zh.cppreference.com/w/cpp/container/vector)
 
-需要使用vector创建变长的数组。
+声明一个 `int` 型的vector：
+```
+ vector<int> vec;
+```
+向vec中插入值：
+```
+vec.push_back() - 新增元素至 vector 的尾端，必要時會進行記憶體配置。
+vec.pop_back() - 刪除 vector 最尾端的元素。
+vec.insert() - 插入一個或多個元素至 vector 內的任意位置。
+vec.erase() - 刪除 vector 中一個或多個元素。
+vec.clear() - 清空所有元素。
+```
+获取vec索引处的值：
+```
+vec[i] - 存取索引值為 i 的元素值。
+vec.at(i) - 存取索引值為 i 的元素的值，
+vec.front() - 回傳 vector 第一個元素的值。
+vec.back() - 回傳 vector 最尾元素的值。
+```
+获得vec的大小：
+```
+vec.empty() - 如果 vector 內部為空，則傳回 true 值。
+vec.size() - 取得 vector 目前持有的元素個數。
+```
 
-`vector < int > a [n];`建立一个a[n]大小的vector数组
-
-`a[i].push_back(temp);`往后面塞进去一个数据
-
-`cout << a[I[i]].at(J[i]);`输出一个数据
-
+> 使用vector创建变长的数组(二维）。
+```
+vector < int > a [n];//建立一个a[n]大小的vector数组
+a[i].push_back(temp);//往后面塞进去一个数据
+cout << a[I[i]].at(J[i]);//输出一个数据
+```
 指针 | 存的内容（变长数组）
 ------- | -------
 a[0] | vector < int > 
