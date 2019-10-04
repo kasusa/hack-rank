@@ -6,6 +6,7 @@
 [Java](#Java) |
 [算法](#算法)
 # `CPP`
+[vector](#vector) [getline](#getline) [输出精度](#输出精度) [MAP](#MAP) [String](#String) [C++类的继承和抽象类](#C++类的继承和抽象类)
 ## ` vector `
 * [o's blog](https://mropengate.blogspot.com/2015/07/cc-vector-stl.html)
 * [题目页面](https://www.hackerrank.com/challenges/variable-sized-arrays/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen)
@@ -69,7 +70,7 @@ cin.ignore();  //ignores an end of line character <<<<
 getline(cin, stringName);
 ```
 ---
-## double 输出精度:
+## 输出精度:
 ```
     double ans = 15.123;
     printf("%.0f",ans);  //output: 15
@@ -117,6 +118,57 @@ cout << myString[0]; // Outputs H
 cout << myString[1]; // Outputs e
 ```
 输入到string的函数：[getline](#`getline()`)
+
+## C++类的继承和抽象类：
+一个普通的父类：
+```
+class Book //创建类
+{
+protected: //保护变量
+    string title;
+    string author;
+
+public: //公共变量、函数
+    Book(string t, string a) //构造函数
+    {
+        title = t;
+        author = a;
+    }
+};
+```
+一个普通的子类：
+```
+class MyBook : Book //创建继承类
+{
+protected:
+    int price = 0;
+public:
+    //构造函数，以及类似super()的父类构造。
+    MyBook(string t, string a, int p) : Book(t,a) 
+    {
+        price = p;
+    }
+};
+```
+## 一个抽象的父类：
+`virtual` 关键字
+```
+class Book
+{
+protected:
+    string title;
+    string author;
+
+public:
+    Book(string t, string a)
+    {
+        title = t;
+        author = a;
+    }
+    virtual void display() = 0; //是这一行让我变成了抽象的父类
+};
+```
+
 ---
 # `Javascript`
 [hackrank day0 教学](https://www.hackerrank.com/challenges/js10-hello-world/topics/javascript-basics)
