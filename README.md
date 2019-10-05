@@ -6,7 +6,7 @@
 [Java](#Java) |
 [算法](#算法)
 # `CPP`
-[vector](#vector) [getline](#getline) [输出精度](#输出精度) [MAP](#MAP) [String](#String) [C++类的继承和抽象类](#C++类的继承和抽象类)
+[vector](#vector) [getline](#getline) [输出精度](#输出精度) [MAP](#MAP) [String](#String) [类的继承/抽象类](#类的继承和抽象类：) [sort()](#sort())
 ## ` vector `
 * [o's blog](https://mropengate.blogspot.com/2015/07/cc-vector-stl.html)
 * [题目页面](https://www.hackerrank.com/challenges/variable-sized-arrays/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen)
@@ -119,7 +119,7 @@ cout << myString[1]; // Outputs e
 ```
 输入到string的函数：[getline](#`getline()`)
 
-## C++类的继承和抽象类：
+## 类的继承和抽象类：
 一个普通的父类：
 ```
 class Book //创建类
@@ -168,6 +168,19 @@ public:
     virtual void display() = 0; //是这一行让我变成了抽象的父类
 };
 ```
+## `sort()`
+例如我们要给一个`elements`排序
+```
+vector<int> elements;
+×× 这里输入elements的值…… ××
+
+sort(elements.begin() , elements.end());
+
+//把vec的头部和尾部的指针传递给sort函数
+//不加第三个参数的话正常排序完是从小到大的顺序
+```
+[结构体sort（）](https://blog.csdn.net/menyangyang/article/details/40593597)
+
 
 ---
 # `Javascript`
