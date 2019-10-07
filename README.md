@@ -6,7 +6,7 @@
 [Java](#Java) |
 [算法](#算法)
 # `CPP`
-[vector](#vector) [getline](#getline) [输出精度](#输出精度) [MAP](#MAP) [String](#String) [类的继承/抽象类](#类的继承和抽象类：) [sort()](#sort())
+[vector](#vector) [getline](#getline) [输出精度](#输出精度) [MAP](#MAP) [String](#String) [类的继承/抽象类](#类的继承和抽象类：) [sort()](#sort()) [类型转换](#类型转换)
 ## ` vector `
 * [o's blog](https://mropengate.blogspot.com/2015/07/cc-vector-stl.html)
 * [题目页面](https://www.hackerrank.com/challenges/variable-sized-arrays/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen)
@@ -181,7 +181,11 @@ sort(elements.begin() , elements.end());
 ```
 [结构体sort（）](https://blog.csdn.net/menyangyang/article/details/40593597)
 
-
+## 类型转换
+`string` 转换 `int`
+```
+C++: stoi(token)
+```
 ---
 # `Javascript`
 [hackrank day0 教学](https://www.hackerrank.com/challenges/js10-hello-world/topics/javascript-basics)
@@ -233,6 +237,28 @@ Scanner scan = new Scanner(System.in); // open scanner
 String s = scan.next(); // read the next token and save it to 's'
 scan.close(); // close scanner
 System.out.println(s); // print 's' to System.out, followed by a new line
+```
+
+## 类型转换
+`string` 转换 `int`
+```
+Java: Integer.parseInt(token)
+```
+## 异常处理
+`try`语句用来捕捉` runtime Exception`
+```
+try{
+    
+    //尝试运行可能会出错的语句
+}
+catch(Exception e){
+    
+    //try{}里面东西如果出错了就会运行这里面的东东
+}
+finally{
+    
+    //反正都会运行
+}
 ```
 ---
 # 算法
