@@ -244,6 +244,10 @@ System.out.println(s); // print 's' to System.out, followed by a new line
 ```
 Java: Integer.parseInt(token)
 ```
+`int` 转换 `string`
+```
+Integer.toString(token)
+```
 ## 异常处理
 `try`语句用来捕捉` runtime Exception`
 ```
