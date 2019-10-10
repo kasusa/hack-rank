@@ -6,8 +6,8 @@
 [Java](#Java) |
 [算法](#算法)
 # `CPP`
-[vector](#vector) [getline](#getline) [输出精度](#输出精度) [MAP](#MAP) [String](#String) [类的继承/抽象类](#类的继承和抽象类：) [sort()](#sort()) [类型转换](#类型转换)
-## ` vector `
+[vector](#vector-cpp) [getline](#getline) [输出精度](#输出精度) [MAP](#MAP) [String](#String) [类的继承/抽象类](#类的继承和抽象类：) [sort()](#sort()) [类型转换](#类型转换-cpp)
+## ` vector-cpp `
 * [o's blog](https://mropengate.blogspot.com/2015/07/cc-vector-stl.html)
 * [题目页面](https://www.hackerrank.com/challenges/variable-sized-arrays/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen)
 * [c++中文网里的解释](https://zh.cppreference.com/w/cpp/container/vector)
@@ -119,7 +119,7 @@ cout << myString[1]; // Outputs e
 ```
 输入到string的函数：[getline](#`getline()`)
 
-## 类的继承和抽象类：
+## 类的继承和抽象类
 一个普通的父类：
 ```
 class Book //创建类
@@ -181,11 +181,12 @@ sort(elements.begin() , elements.end());
 ```
 [结构体sort（）](https://blog.csdn.net/menyangyang/article/details/40593597)
 
-## 类型转换
+## 类型转换-cpp
 `string` 转换 `int`
 ```
 C++: stoi(token)
 ```
+
 ---
 # `Javascript`
 [hackrank day0 教学](https://www.hackerrank.com/challenges/js10-hello-world/topics/javascript-basics)
@@ -199,7 +200,11 @@ _variable
 $variable
 ```
 ---
+
+
+
 # `Java`
+[读取输入](#读取输入) | [类型转换](#类型转换-java) | [Vector](#Vector-java) |[循环](#循环-java)
 ## 命名方法
 ### `一个类的标准命名方式 ：`
 以大写字母开头,并且使用
@@ -211,7 +216,7 @@ $variable
 
 > `注意: `有些人在声明变量时使用小写字母和下划线来模拟空格(例如: “ `my_variable`”)。 这是一种叫做“`小蛇格式`”的样式，Java 程序员在某些特殊变量名称(例如: 私有类变量或常量)的开头使用下划线来区分它们和整个程序中使用的其他变量。
 
-## `从 System.in (标准输入流 stdin)读取输入`
+## 读取输入
  在 Java 中，Scanner 类广泛用于读取输入，但是每种语言都有自己处理 IO (输入和输出)的机制。使用 Scanner 类读取 stdin 的语法如下:
 ```
  Scanner scan = new Scanner(System.in);
@@ -239,7 +244,7 @@ scan.close(); // close scanner
 System.out.println(s); // print 's' to System.out, followed by a new line
 ```
 
-## 类型转换
+## 类型转换-java
 `string` 转换 `int`
 ```
 Java: Integer.parseInt(token)
@@ -258,6 +263,32 @@ catch(Exception e){
 finally{
     
     //反正都会运行
+}
+```
+## Vector-java
+[vectro in java](https://beginnersbook.com/2013/12/vector-in-java/)
+
+声明一个 `int` 类型的 `Vector`
+```
+Vector<Integer> deviders = new Vector();
+```
+添加数据：
+        
+```
+for(int i = 1 ; i<=n;i++){
+    if(n%i == 0)
+        deviders.add(i);  
+}
+//这里的例子是：把所有可以整除n的整数存入vector
+```
+## 循环-java
+
+advance for loop
+```
+char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+
+for (char item: vowels) {
+   System.out.println(item);
 }
 ```
 ---
