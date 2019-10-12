@@ -204,7 +204,7 @@ $variable
 
 
 # `Java`
-[读取输入](#读取输入) | [类型转换](#类型转换-java) | [Vector](#Vector-java) |[循环](#循环-java)
+[读取输入](#读取输入) | [类型转换](#类型转换-java) | [Vector](#Vector-java) |[循环](#循环-java) |[泛型](#泛型-java)
 ## 命名方法
 ### `一个类的标准命名方式 ：`
 以大写字母开头,并且使用
@@ -295,6 +295,25 @@ for (char item: vowels) {
    System.out.println(item);
 }
 ```
+## 泛型-java
+
+我简单的理解，泛型就是一个可以接受各种输入，但是不是多重函数的方法‘
+用法如下，一定要写`<E>`
+```
+public  <E> void printArray(E [] Array) {
+    for(E element : Array){
+        System.out.println(element + " ");
+    }
+}
+```
+
+
+
+
+
+
+
+
 ---
 # 算法
 base 10 -> base 2 的伪代码
