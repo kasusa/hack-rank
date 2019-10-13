@@ -337,3 +337,12 @@ for(_反正就是遍历循环)
 }
 ```
 > 注意：`biggest`设置为0的话，如果下面所有的值都是`负的`那么就会出问题！
+
+[获取树的高度](https://www.hackerrank.com/challenges/30-binary-search-trees/editorial)
+> 我真的无话可说，这是什么神仙脑回路写的这么简洁！
+```
+if t is empty,
+    height(t) = -1
+else
+    height(t) = 1 + MAX( height( leftSubtree(t), rightSubtree(t) ) )
+```
