@@ -306,10 +306,18 @@ public  <E> void printArray(E [] Array) {
     }
 }
 ```
-
-
-
-
+## java Queue 
+[菜鸟教程](https://www.runoob.com/java/data-queue.html)
+声明：
+```
+Queue<Node> queue = new LinkedList();
+```
+常用操作：
+```
+ queue.offer(value); //插入值
+ queue.poll();       //返回首值
+ queue.isEmpty();    //如果空，返回true
+```
 
 
 
@@ -346,3 +354,5 @@ if t is empty,
 else
     height(t) = 1 + MAX( height( leftSubtree(t), rightSubtree(t) ) )
 ```
+树的各种遍历方法：
+[hackrank toturial](https://www.hackerrank.com/challenges/30-binary-trees/tutorial)
