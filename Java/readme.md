@@ -1,5 +1,5 @@
 # `Java`
-[读取输入](#读取输入) | [类型转换](#类型转换-java) | [Vector](#Vector-java) |[循环](#循环-java) |[泛型](#泛型-java)
+[读取输入](#读取输入) | [类型转换](#类型转换-java) | [Vector](#Vector-java) |[循环](#循环-java) |[泛型](#泛型-java) | [java Queue ](#java Queue ) | [正则表达式](#正则表达式) |[使用delimiter切分字符串](#使用delimiter切分字符串) | [java极值](#java极值)
 ## 命名方法
 ## `一个类的标准命名方式 ：`
 以大写字母开头,并且使用
@@ -178,4 +178,12 @@ s1array[2]: Farewell
 s2array[0]: Hola
 s2array[1]: Adios
 s2array[2]: Hasta Luego
+```
+
+## java极值
+
+Int类型：
+```
+Integer.MIN_VALUE
+Integer.MAX_VALUE
 ```
