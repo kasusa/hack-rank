@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js test</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+function print(name, variable) {
+    console.log(
+        name + "(" + variable 
+        + ") is a " + typeof variable
+    );
+}
+
+var someNumber = 10;
+var someString = "Ten";
+var someBoolean = false;
+
+var sumOfNumberAndString = someNumber + someString;
+var sumOfBooleanAndString = someBoolean + someString;
+var sumOfNumberAndBoolean = someNumber + someBoolean;
+
+print("sumOfNumberAndString", sumOfNumberAndString);
+print("sumOfBooleanAndString", sumOfBooleanAndString);
+print("sumOfNumberAndBoolean", sumOfNumberAndBoolean);
+</script>
