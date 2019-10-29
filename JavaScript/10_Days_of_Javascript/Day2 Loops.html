@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day 2: Loops</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+function vowelsAndConsonants(s) {
+    for(let i in s){
+        if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u')
+        console.log(s[i]);
+
+    }
+    for(let i in s){
+
+        if(!(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'))
+        console.log(s[i]);
+    }
+}
+vowelsAndConsonants("javascriptloops");
+</script>
