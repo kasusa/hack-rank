@@ -8,9 +8,11 @@ parseInt(variable);
 ```
 console.log()
 ```
-
-let 创建局域变量
-
+# 变量
+## 声明
+`var` ：普通声明。
+`let` ：块内声明。
+`const` ：全局固定。
 # Functions
 一个简单的函数例子
 ```
