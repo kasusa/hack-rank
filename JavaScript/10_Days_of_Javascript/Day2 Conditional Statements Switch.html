@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>`
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day2 Conditional Statements Switch
+
+    </title>
+</head>
+
+<body>
+    <script>
+        function hellow(){
+            console.log("hello world");
+        }
+        function getLetter(s) {
+            let letter;
+            letter = s[0];
+            // console.log("s[0] : " + s[0]);
+            switch (letter)
+            {
+                case 'a' :
+                case 'e' :
+                case 'i' :
+                case 'o' :
+                case 'u' :
+                letter = 'A';
+                break;
+                
+                case 'b' :
+                case 'c' :
+                case 'd' :
+                case 'f' :
+                case 'g' :
+                letter = 'B';
+                break;
+
+                case 'h' :
+                case 'j' :
+                case 'k' :
+                case 'l' :
+                case 'm' :
+                letter = 'C';
+                break;
+
+                default :
+                letter = 'D';
+                break;
+            }
+            // console.log("letter: " + letter);
+
+            return letter;
+        }
+    </script>
+</body>
+
+</html>
