@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day3 Arrays</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    /**
+     *   Return the second largest number in the array.
+     *   @param {Number[]} nums - An array of numbers.
+     *   @return {Number} The second largest number in the array.
+     **/
+    var nums = [2, 3, 6, 6, 5];
+    var nums = [2, 3, 6, 6, 5];
+    var nums = [2, 3, 19, 6, 5];
+
+
+    function getSecondLargest(nums) {
+        nums.sort((a, b) => a - b)
+            // console.log('nums:', nums);
+
+
+        let t = nums.length - 1 - 1;
+        while (nums[t] == nums[t + 1]) {
+            t--;
+        }
+        return nums[t];
+    }
+</script>
