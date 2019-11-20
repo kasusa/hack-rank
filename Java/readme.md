@@ -1,5 +1,5 @@
 # `Java`
-[读取输入](#读取输入) | [类型转换](#类型转换-java) | [Vector](#Vector-java) |[循环](#循环-java) |[泛型](#泛型-java) | [java Queue ](#java Queue ) | [正则表达式](#正则表达式) |[使用delimiter切分字符串](#使用delimiter切分字符串) | [java极值](#java极值)
+[读取输入](#读取输入) | [类型转换](#类型转换-java) | [Vector](#Vector-java) |[循环](#循环-java) |[泛型](#泛型-java)  | [正则表达式](#正则表达式) |[使用delimiter切分字符串](#使用delimiter切分字符串) | [java极值](#java极值) | str1.equals("abc")
 ## 命名方法
 ## `一个类的标准命名方式 ：`
 以大写字母开头,并且使用
