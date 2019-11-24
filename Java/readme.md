@@ -199,7 +199,7 @@ Integer.MAX_VALUE
 
 # String
 ## substring函数
-
+总之这个函数就是给两个值，按照索引切掉你的字符串
 ```java
   Scanner in = new Scanner(System.in);
   String S = in.next();
@@ -214,4 +214,23 @@ Integer.MAX_VALUE
 < manyouhu
 < 0 3
 > man
+```
+
+## sort string[]
+比如我有个string的数组，可以如此调用java的排序算法：
+```java
+  String[] myStrings = {"bbbb", "aaa" , "bbbb" , "ccc"};
+  Arrays.sort(myStrings);
+  //foreach
+  for (String a: myStrings) {
+      System.out.println(a);
+  }
+```
+
+输出
+```
+aaa
+bbbb
+bbbb
+ccc
 ```
