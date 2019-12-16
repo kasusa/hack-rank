@@ -1,5 +1,6 @@
 # `Java`
 * [读取输入](#读取输入) 
+*  [输出格式](#输出格式)
  * [类型转换](#类型转换-java) 
   * [Vector](#Vector-java) 
   * [循环](#循环-java) 
@@ -32,27 +33,51 @@ java xxx < input.txt
 ```
  Scanner scan = new Scanner(System.in);
 ```
+
 下面是常用的scan方法，[这里](https://docs.oracle.com/javase/7/docs/api/java/util/Scanner.html#method_summary)查看更多方法。
 ```
-scan.nextInt();//获取一个int类型的值
-scan.nextDouble();//获取一个double类型的值
+scan.nextInt();     //获取一个int类型的值
+scan.nextDouble();  //获取一个double类型的值
+scan.next();        //获取下一个string，一般来说
+scan.nextLine();    //获取下一行内容，不会跳过空格，会同时收下这一行的回车
 ```
+
 ```
- scan.next(); // returns the next token of input
- scan.hasNext(); // returns true if there is another token of input (false otherwise)
- scan.nextLine() // returns the next LINE of input
- scan.hasNextLine(); // returns true if there is another line  of input
+ scan.hasNext(); //返回下一个 token 是否存在
+ scan.hasNextLine(); // 返回是否存在下一行
 ```
+
 当您完成对输入流的读取后，应该关闭它以避免资源泄漏。
 ```
 scan.close();
 ```
+
 下面是一个具体的栗子
 ```
 Scanner scan = new Scanner(System.in); // open scanner
 String s = scan.next(); // read the next token and save it to 's'
 scan.close(); // close scanner
 System.out.println(s); // print 's' to System.out, followed by a new line
+```
+## 输出格式
+```
+String.format("%d", 93);        // prints: 93
+String.format("|%20d|", 93);    // prints: |                  93|
+String.format("|%-20d|", 93);   // prints: |93                  |
+String.format("|%020d|", 93);   // prints: |00000000000000000093|
+String.format("|%+20d|', 93);   // prints: |                 +93|
+String.format("|% d|", 93);     // prints: | 93|
+String.format("|% d|", -36);    // prints: |-36|
+String.format("|%,d|", 10000000); // prints: |10,000,000|
+String.format("|%(d|", -36);    // prints: |(36)|
+```
+8进制 /16进制
+```
+String.format("|%o|"), 93);     // prints: 135
+String.format("|%x|", 93);      // prints: 5d
+String.format("|%#o|", 93);     // prints: 0135 (补零)
+String.format("|%#x|", 93);     // prints: 0x5d
+String.format("|%#X|", 93);     // prints: 0X5D
 ```
 
 ## 类型转换-java
@@ -240,4 +265,10 @@ aaa
 bbbb
 bbbb
 ccc
+```
+# Math
+## 次方
+```java
+
+Math.pow(x,y); //x^y
 ```
