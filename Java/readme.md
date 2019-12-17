@@ -1,15 +1,15 @@
 # `Java`
 * [读取输入](#读取输入) 
-*  [输出格式](#输出格式)
- * [类型转换](#类型转换-java) 
-  * [Vector](#Vector-java) 
-  * [循环](#循环-java) 
-  * [泛型](#泛型-java)  
- * [正则表达式](#正则表达式) 
-* [使用delimiter切分字符串](#使用delimiter切分字符串) 
- * [java极值](#java极值) 
- * [String](#String)
- * str1.equals("abc")
+* [输出格式](#输出格式)
+* [类型转换](#类型转换-java) 
+---
+* [应用级别知识 foreach ,clone](#应用级别知识) 
+---
+* [泛型](#泛型-java)  
+* [String](#String)
+* [Math](#Math)
+
+
 ## 命名方法
 ## `一个类的标准命名方式 ：`
 以大写字母开头,并且使用
@@ -59,6 +59,7 @@ String s = scan.next(); // read the next token and save it to 's'
 scan.close(); // close scanner
 System.out.println(s); // print 's' to System.out, followed by a new line
 ```
+
 ## 输出格式
 ```
 String.format("%d", 93);        // prints: 93
@@ -89,6 +90,7 @@ Java: Integer.parseInt(token)
 ```
 Integer.toString(token)
 ```
+
 ## 异常处理
 `try`语句用来捕捉` runtime Exception`
 ```
@@ -105,7 +107,57 @@ finally{
     //反正都会运行
 }
 ```
-# Vector-java
+# 应用级别知识
+
+## foreach
+
+advance for loop
+```
+char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+
+for (char item: vowels) {
+   System.out.println(item);
+}
+```
+## clone
+有的时候想要复制一个数组。用一个佛如循环复制内容未免太过繁杂
+可以使用 `clone()`
+> clone方法是从Object类继承过来的，基本数据类型（int ，boolean，char，byte，short，float ，double，long）都可以直接使用
+```
+int[] a1 = {1, 3};
+int[] a2 = a1.clone();
+```
+
+
+
+# 泛型-java
+* [Queue](#javaQueue)
+* [Vector-java](#Vector-java)
+
+我简单的理解，泛型就是一个可以接受各种输入，但是不是多重函数的方法‘
+用法如下，一定要写`<E>`
+```
+public  <E> void printArray(E [] Array) {
+    for(E element : Array){
+        System.out.println(element + " ");
+    }
+}
+```
+
+## javaQueue 
+[菜鸟教程](https://www.runoob.com/java/data-queue.html)
+声明：
+```
+Queue<Node> queue = new LinkedList();
+```
+常用操作：
+```
+ queue.offer(value); //插入值
+ queue.poll();       //返回首值
+ queue.isEmpty();    //如果空，返回true
+```
+
+## Vector-java
 [vectro in java](https://beginnersbook.com/2013/12/vector-in-java/)
 
 声明一个 `int` 类型的 `Vector`
@@ -137,41 +189,56 @@ for(int i = 0 ; i < n ; i++){
     System.out.println(name);
 }
 ```
-# 循环-java
 
-advance for loop
-```
-char[] vowels = {'a', 'e', 'i', 'o', 'u'};
 
-for (char item: vowels) {
-   System.out.println(item);
-}
-```
-# 泛型-java
+# String
+* [substring函数](#substring函数)
+* [正则表达式](#正则表达式) 
+* [sort](#sortString)
 
-我简单的理解，泛型就是一个可以接受各种输入，但是不是多重函数的方法‘
-用法如下，一定要写`<E>`
+比较使用 
 ```
-public  <E> void printArray(E [] Array) {
-    for(E element : Array){
-        System.out.println(element + " ");
-    }
-}
-```
-## java Queue 
-[菜鸟教程](https://www.runoob.com/java/data-queue.html)
-声明：
-```
-Queue<Node> queue = new LinkedList();
-```
-常用操作：
-```
- queue.offer(value); //插入值
- queue.poll();       //返回首值
- queue.isEmpty();    //如果空，返回true
+str1.equals("abc")
 ```
 
-# 正则表达式
+## substring函数
+总之这个函数就是给两个值，按照索引切掉你的字符串
+```java
+  Scanner in = new Scanner(System.in);
+  String S = in.next();
+  int start = in.nextInt();
+  int end = in.nextInt();
+
+  S = S.substring(start,end);
+  System.out.println(S);
+```
+//测试：
+```
+< manyouhu
+< 0 3
+> man
+```
+
+## sortString
+比如我有个string的数组，可以如此调用java的排序算法：
+```java
+  String[] myStrings = {"bbbb", "aaa" , "bbbb" , "ccc"};
+  Arrays.sort(myStrings);
+  //foreach
+  for (String a: myStrings) {
+      System.out.println(a);
+  }
+```
+
+输出
+```
+aaa
+bbbb
+bbbb
+ccc
+```
+
+## 正则表达式
 [正则表达式测试站](https://rubular.com/r/UAgzl9NxQv)
 
 ## 正则表达式标准使用
@@ -221,54 +288,22 @@ s2array[1]: Adios
 s2array[2]: Hasta Luego
 ```
 
-## java极值
 
-Int类型：
-```
-Integer.MIN_VALUE
-Integer.MAX_VALUE
-```
-
-# String
-## substring函数
-总之这个函数就是给两个值，按照索引切掉你的字符串
-```java
-  Scanner in = new Scanner(System.in);
-  String S = in.next();
-  int start = in.nextInt();
-  int end = in.nextInt();
-
-  S = S.substring(start,end);
-  System.out.println(S);
-```
-//测试：
-```
-< manyouhu
-< 0 3
-> man
-```
-
-## sort string[]
-比如我有个string的数组，可以如此调用java的排序算法：
-```java
-  String[] myStrings = {"bbbb", "aaa" , "bbbb" , "ccc"};
-  Arrays.sort(myStrings);
-  //foreach
-  for (String a: myStrings) {
-      System.out.println(a);
-  }
-```
-
-输出
-```
-aaa
-bbbb
-bbbb
-ccc
-```
 # Math
+* [次方](#次方)
+* [java极值](#java极值)
+
+
 ## 次方
 ```java
 
 Math.pow(x,y); //x^y
+```
+
+## java极值
+
+Int类型：
+```java
+Integer.MIN_VALUE
+Integer.MAX_VALUE
 ```
