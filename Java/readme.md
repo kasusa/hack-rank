@@ -174,6 +174,17 @@ Queue<Node> queue = new LinkedList();
 # 正则表达式
 [正则表达式测试站](https://rubular.com/r/UAgzl9NxQv)
 
+## email 正则
+
+```java
+public static boolean isEmailRight(String emailStr) {
+    Pattern VALID_EMAIL_ADDRESS_REGEX =
+            Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+    Matcher matcher = VALID_EMAIL_ADDRESS_REGEX .matcher(emailStr);
+    return matcher.find();
+}
+```
+
 ## 正则表达式标准使用
 ```
 // 您的正则表达式string （RegEx）
