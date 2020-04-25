@@ -1,295 +1,173 @@
-# 强制格式转换
-```
-parseInt(variable);
-```
+# 从头开始
+[廖雪峰博客](https://www.liaoxuefeng.com/wiki/1022910821149312/1023020952022784)
 
-# 输出
+[字符串](#字符串)
+[数组](#数组)
+# 字符串
+* [多行字符串](#多行字符串)
+* [模板字符串](#模板字符串)
+* [更多普通例子](#更多普通例子)
+* [substring indexof](#更多普通例子)
+* [不要直接给索引赋值](#特别注意)
 
+## 多行字符串
+
+```js
+var a =
+`
+这是一个
+多行
+字符串
+还不用换行符
+只要被反引号包起来就好了
+`;
+console.log(a);
 ```
-console.log()
-```
-# 变量
-## 声明
-`var` ：普通声明。
-`let` ：块内声明。
-`const` ：全局固定。
-# Functions
-一个简单的函数例子
-```
-function greetings(name) {
-    console.log("Hello, " + name);
-}
-```
-## return 
-如果没有用 `return` 关键字就是返回一个 `undefined`
+## 模板字符串
 
-## function expression 
-`function expression ` 可以看作一个匿名的 `function` 
-
-`function expression ` 经常用来做触发(IIFEs)，因为他们会在声明完后直接触发
-
-# map
-```
-let actress = new Map([
-    ["firstName", "Julia"],
-    ["lastName", "Roberts"],
-    ["dateOfBirth", "October 28, 1967"],
-    ["nationality", "American"],
-    ["firstMovie", "Satisfaction"]
-]);
-
-// Print each Key-Value pair in the map
-for (let info of actress) {
-    console.log(info);
-}
-
-// Print each Key and Value as "Key: Value"
-console.log();
-for (let info of actress) {
-    console.log(info[0] + ": " + info[1]);
-}
+```js
+// 模板字符串 , 用这个就不需要写一堆引号加号了
+var name = '小明';
+var age = 20;
+var message = `你好, ${name}, 你今年${age}岁了!`;
+alert(message);
 ```
 
-# switch
-多个switch的连用。
-```
-switch (n) {
-        case 2:
-        case 4:
-        case 6:
-            console.log("A");
-            break;
-        case 3:
-        case 5:
-        case 7:
-            console.log("B");
-            break;
-        default:
-            console.log("C");
-    }
+## 更多普通例子
+
+```js
+var s = 'Hello, world!';
+console.log(s.length); // 13
+s[0]; // 'H'
+s[6]; // ' '
+s[7]; // 'w'
+s[12]; // '!'
+s[13]; // undefined 超出范围的索引不会报错，但一律返回undefined
+s.substring(0, 5); // 从索引0开始到5（不包括5），返回'hello'
+s.substring(7); // 从索引7开始到结束，返回'world'
+s.indexOf('world'); // 返回7
+s.indexOf('World'); // 没有找到指定的子串，返回-1
 ```
 
-# Arrays 
-
-<https://www.hackerrank.com/challenges/js10-arrays/topics>
-
-创建一个指针 。 获取长度
-
+## 特别注意
+需要特别注意的是，字符串是不可变的，如果对字符串的某个索引赋值，不会有任何错误，但是，也没有任何效果：
+```js
+var s = 'Test';
+s[0] = 'X';
+alert(s); // s仍然为'Test'
 ```
-var a = ['first', 'second'];
-
-console.log('a\'s contents:', a);       // ['first', 'second']
-console.log('a\'s length:', a.length);  // 2
-
-```
-
-遍历（不是很懂这个forEach）
-```
-var a = ['first', 'second'];
-
-a.forEach(function(e, i, array) {
-    // 'i' is the index
-    // 'e' is the element
-    console.log(i + ' ' + e);
-});
-
-```
-向array尾部添加新项 【 push 】
-```
-var a = ['first', 'second'];
-
-// Append 'third' to array 'a'
-a.push('third');
-
-console.log('a:', a);
-
-```
-删掉最后一项【 pop 】
-```
-var a = ['first', 'second', 'third'];
-console.log('Original Array:', a);
-
-// Remove the last element from the array
-let removed = a.pop();
-
-console.log('Modified Array:', a);
-console.log('Removed Element:', removed);
-
-```
-删除头项【 shift 】
-```
-var a = ['first', 'second', 'third'];
-console.log('Original Array:', a);
-
-// Remove the first element from the array
-let removed = a.shift();
-
-console.log('Modified Array:', a);
-console.log('Removed Element:', removed);
-
-```
-添加头项【 unshift 】
-```
-var a = ['first', 'second', 'third'];
-console.log('Original Array:', a);
-
-// Insert element at the beginning of the array
-a.unshift('fourth');
-
-console.log('Modified Array:', a);
-
-
-```
-寻找项目（根据内容找索引）【 indexOf('内容') 】
-```
-var a = ['first', 'second', 'third', 'fourth'];
-
-let position = a.indexOf('second');
-
-console.log('a:', a);
-console.log('position:', position);
-
-```
-删除项目（索引处的项目）【 splice(position, elementsToRemove) 】
-```
-var a = ['first', 'second', 'third', 'fourth', 'fifth'];
-console.log('Original Array:', a);
-
-let position = 1;
-let elementsToRemove = 2;
-// Remove 'elementsToRemove' element(s) starting at 'position'
-a.splice(position, elementsToRemove);
-
-console.log('Modified Array:', a);
-
-
-```
-复制一个Array 【 slice 】
-```
-var a = ['first', 'second', 'third', 'fourth'];
-console.log('a:', a);
-
-// Shallow copy array 'a' into a new object
-let b = a.slice();
-
-console.log('b:', b);
-
-
-```
-## 指针排序：
-hackerrank上面看到的数字排序：
-```
- nums.sort((a, b) => a - b)
-
-```
-
-默认排序法 ps 默认排序有点问题666
-```
-var a = ['c', 'a', 'd', 'b', 'aa'];
-var b = [9, 2, 13, 7, 1, 12, 123];
-
-// Sort in ascending lexicographical order using a built-in
-a.sort();
-b.sort();
-
-console.log('a:', a);  //a: [ 'a', 'aa', 'b', 'c', 'd' ]
-console.log('b:', b);  //b: [ 1, 12, 123, 13, 2, 7, 9 ]
-
-```
-自定义函数
-```
-var a = ['c', 'a', 'd', 'b', 'aa'];
-var b = [9, 2, 13, 7, 1, 12, 123];
-
-// Sort in descending lexicographical order using a compare function
-a.sort(function(x, y) { return x < y; } );
-b.sort(function(x, y) { return x < y; } );
-
-console.log('a:', a);
-console.log('b:', b);
-
-```
-也是自定义函数 compare arrow function ？不太能懂
-```
-var a = ['c', 'a', 'd', 'b', 'aa'];
-
-// Sort in descending lexicographical order using a compare arrow function
-a.sort((x, y) => x < y);
-
-console.log('a:', a);
-
-```
-遍历 Array 【用 for .. of】
-```
-var a = ['first', 'second', 'third', 'fourth'];
-
-for (let e of a) {
-    console.log('e:', e);
-}
-
-```
+JavaScript为字符串提供了一些常用方法，注意，调用这些方法本身不会改变原有字符串的内容，而是返回一个新字符串
 
 
 
 
 
-# 正则表达式
-[hackerrank](https://www.hackerrank.com/challenges/js10-regexp-1/topics)
-```
-const re = /你的正则/ ；
-const str1 = '要测试的句子';
-# test 
-console.log(re.test(str1)); //true or false
-var res = re.exec(str);
+
+
+# 数组
+
+* [slice分片](#slice分片)
+* [push pop shift unshift](#头部和尾部添加删除)
+* [sort reverse](#数组的顺序)
+* [concat](#concat)
+* [join](#join)
 ---
-# exec
-console.log(res); //输出一大串
-console.log();
-console.log('string of characters matched = ' + res[0]);
-console.log('first parenthesized substring match = ' + res[1]);
-console.log('second parenthesized substring match = ' + res[2]);
-console.log('index of the match = ' + res.index);
-console.log('original string = ' + res.input);
----
-# Search //返回索引位置
-const re = /learn/;
-const str1 = 'Today, we\'ll learn about regular expressions.';
-console.log(str1); //Today, we'll learn about regular expressions.
-console.log('A search for', re, 'returns', str1.search(re), '\n'); //A search for /learn/ returns 13 
----
-# Split
-const name = 'Julia Roberts';
-const res = name.split(' ');
+* 创建
+* 取得索引处值
+* 根据内容获得索引(-1 代表 无)
+```js
+var arr = ['A', 'B', 'C'];
+arr[1] = 99;
+arr; // arr现在变为['A', 99, 'C']
 
-console.log('The split array:', res);
-console.log('First Name:', res[0]);
-console.log('Last Name:', res[1]);
-//The split array: [ 'Julia', 'Roberts' ]
-//First Name: Julia
-//Last Name: Roberts
----
-# Replace
-const re = /RegExp/;
-const myString = 'We\'re learning about RegExps.';
-const replacementString = 'Regular Expression';
+var arr = ['A', 'B', 'C'];
+arr[5] = 'x';
+arr; // arr变为[1, 2, 3, undefined, undefined, 'x']
 
-console.log(myString);
-console.log(myString.replace(re, replacementString));
-//We're learning about RegExps.
-//We're learning about Regular Expressions.
-
+var arr = [10, 20, '30', 'xyz'];
+arr.indexOf(10); // 元素10的索引为0
+arr.indexOf(20); // 元素20的索引为1
+arr.indexOf(30); // 元素30没有找到，返回-1
+arr.indexOf('30'); // 元素'30'的索引为2
 ```
 
-首尾部相同
-
-why can't i use this 
-
-```
-^[aeiou].*\1$
-```
-but this is ok?
-
-```
-^(a|e|i|o|u).*\1$
+## slice分片
+`slice()`就是对应String的`substring()`版本，它截取Array的部分元素，然后返回一个新的Array：
+```js
+var arr = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+arr.slice(0, 3); // 从索引0开始，到索引3结束，但不包括索引3: ['A', 'B', 'C']
+arr.slice(3); // 从索引3开始到结束: ['D', 'E', 'F', 'G']
 ```
 
+## 头部和尾部添加删除
+* push和pop
+  * push()向Array的末尾添加若干元素，pop()则把Array的最后一个元素删除掉：
+* unshift和shift
+  * 如果要往Array的头部添加若干元素，使用unshift()方法，shift()方法则把Array的第一个元素删掉：
+
+
+```js
+var arr = [1, 2];
+arr.push('A', 'B'); // 返回Array新的长度: 4
+arr; // [1, 2, 'A', 'B']
+arr.pop(); // pop()返回'B'
+arr; // [1, 2, 'A']
+arr.pop(); arr.pop(); arr.pop(); // 连续pop 3次
+arr; // []
+arr.pop(); // 空数组继续pop不会报错，而是返回undefined
+arr; // []
+
+var arr = [1, 2];
+arr.unshift('A', 'B'); // 返回Array新的长度: 4
+arr; // ['A', 'B', 1, 2]
+arr.shift(); // 'A'
+arr; // ['B', 1, 2]
+arr.shift(); arr.shift(); arr.shift(); // 连续shift 3次
+arr; // []
+arr.shift(); // 空数组继续shift不会报错，而是返回undefined
+arr; // []
+```
+
+## 数组的顺序
+* sort
+  * sort()可以对当前Array进行排序，它会直接修改当前Array的元素位置，
+  * 直接调用时，按照默认顺序排序：
+* reverse
+  * reverse()把整个Array的元素给掉个个，也就是反转：
+
+```js
+
+var arr = ['B', 'C', 'A'];
+arr.sort();
+arr; // ['A', 'B', 'C']
+// 能否按照我们自己指定的顺序排序呢？完全可以，我们将在后面的函数中讲到。
+
+
+var arr = ['one', 'two', 'three'];
+arr.reverse(); 
+arr; // ['three', 'two', 'one']
+```
+
+## concat
+* concat()方法把当前的Array和另一个Array连接起来，并返回一个新的Array：
+  * 请注意，concat()方法并没有修改当前Array，而是返回了一个新的Array。
+  * 实际上，concat()方法可以接收任意个元素和Array，并且自动把Array拆开，然后全部添加到新的Array里：
+
+```js
+var arr = ['A', 'B', 'C'];
+var added = arr.concat([1, 2, 3]);
+added; // ['A', 'B', 'C', 1, 2, 3]
+arr; // ['A', 'B', 'C']
+
+
+var arr = ['A', 'B', 'C'];
+arr.concat(1, 2, [3, 4]); // ['A', 'B', 'C', 1, 2, 3, 4]
+```
+
+## join
+join()方法是一个非常实用的方法，它把当前Array的每个元素都用指定的字符串连接起来，然后返回连接后的字符串：
+
+```js
+var arr = ['A', 'B', 'C', 1, 2, 3];
+arr.join('-'); // 'A-B-C-1-2-3'
+```
