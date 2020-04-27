@@ -11,29 +11,31 @@ class MyDirEventHandler(FileSystemEventHandler):
     def on_created(self, event):
         print(event)
         try:
+            # 获得丢进去的文件的后缀
             a = event.src_path.split(".")
             suffix = a[-1]
-
+            # 获取丢进去的文件丢到的目录
             b = event.src_path.split("\\")
             Directory = b[0]
-            print("Directory", Directory)
-
+            print("\n获取目录位置:", Directory)
+            # 获取丢进去之前的最大id（名字编码，空的话给1）
             k = []
             for i, j, k in os.walk(Directory):
                 pass
             k.remove(b[1])
             if k.__len__() > 0:
                 k.sort()
-                print(k)
                 filenum = int(k[-1].split(".")[0])
                 filenum += 1
             else:
                 filenum = 1
+            print("获得可用数字:",filenum)
+            # 制作结果位置+名字字符串
             moved = Directory + "\\\\" + str(filenum) + "." + suffix
-            print("moved", moved)
-
+            print("文件将重命名为:", moved)
+            # 重命名
             os.rename(event.src_path, moved)
-            print("file renamed ")
+            print("文件重命名完成,请手动刷新资源管理器 \n")
         except FileNotFoundError:
             # handle the error
             pass
