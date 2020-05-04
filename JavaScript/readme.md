@@ -171,3 +171,77 @@ join()方法是一个非常实用的方法，它把当前Array的每个元素都
 var arr = ['A', 'B', 'C', 1, 2, 3];
 arr.join('-'); // 'A-B-C-1-2-3'
 ```
+
+# 对象json
+[廖雪峰](https://www.liaoxuefeng.com/wiki/1022910821149312/1023020997017056)
+* [添加和删除属性](#添加和删除属性)
+* [检测是否拥有属性](#检测是否拥有属性)
+
+## 基础
+一个例子
+
+```js
+var xiaoming = {
+    name: '小明',
+    birth: 1990,
+    school: 'No.1 Middle School',
+    height: 1.70,
+    weight: 65,
+    score: null
+};
+```
+
+访问它的属性
+
+```js
+xiaoming.name; // '小明'
+xiaoming.birth; // 1990
+```
+
+> 有关特殊命名属性,看廖雪峰的链接
+
+## 添加和删除属性
+* 添加属性  直接给这个属性赋值 `xiaoming.age = 18;`
+* 删除属性  使用关键字 delete `delete xiaoming.age;`
+* 访问不存在的属性 会返回 `undefined`
+
+
+```js
+var xiaoming = {
+    name: '小明'
+};
+xiaoming.age; // undefined
+xiaoming.age = 18; // 新增一个age属性
+delete xiaoming.age; // 删除age属性
+xiaoming.age; // undefined
+delete xiaoming['name']; // 删除name属性 
+xiaoming.name; // undefined
+delete xiaoming.school; // 删除一个不存在的school属性也不会报错
+```
+
+## 检测是否拥有属性
+如果我们要检测xiaoming是否拥有某一属性，可以用in操作符：
+
+```js
+var xiaoming = {
+    name: '小明',
+    birth: 1990,
+    school: 'No.1 Middle School',
+    height: 1.70,
+    weight: 65,
+    score: null
+};
+'name' in xiaoming; // true
+'grade' in xiaoming; // false
+```
+
+不过要小心，如果`in`判断一个属性存在，这个属性不一定是xiaoming的，它可能是xiaoming继承得到的,
+要判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用`hasOwnProperty()`方法：
+
+```js
+var xiaoming = {
+    name: '小明'
+};
+xiaoming.hasOwnProperty('name'); // true
+xiaoming.hasOwnProperty('toString'); // false
+```
