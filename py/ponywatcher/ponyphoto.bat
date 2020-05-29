@@ -5,5 +5,6 @@ REM 3. make sure to install all python dependency first using : pip install "Som
 REM this line is for open a website using default browser explorer "https://www.derpibooru.org/"
 
 @ echo off
-cd C:\Users\kasus\Documents\git_project\hack-rank\py\ponywatcher
+start c:\test
+cd C:\GitHub\hack-rank\py\ponywatcher
 python pwatch.py
