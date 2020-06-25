@@ -17,6 +17,6 @@ download_path : {_download_path}
 请粘贴要下载的youtube视频链接:'''
     print(to_say)
     youtubelink = input("")
-    command = f"you-get -x 1{_http_proxy} -o {_download_path} {youtubelink}"
+    command = f"you-get -x {_http_proxy} -o {_download_path} {youtubelink}"
     print("请耐心等待解析,马上就会显示下载进度...")
     os.system(command)
