@@ -44,9 +44,9 @@ switch{
 
 ## js 弹窗
 ```js
-1. alert('sss\nsss')
-2. var user = prompt('input your name plz') //输入弹窗
-3. var result = confirm('yes or no?') //是 或者 否
+alert('sss\nsss')
+var user = prompt('input your name plz') //输入弹窗
+var result = confirm('yes or no?') //是 或者 否
 ```
 
 ## js object
@@ -71,4 +71,6 @@ function person(name, age, color) {
 // 使用构造函数创造一个obj
 var ham = new person('ham',18,'blue');
 ```
+
+## Arrays
 
