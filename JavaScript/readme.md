@@ -72,5 +72,62 @@ function person(name, age, color) {
 var ham = new person('ham',18,'blue');
 ```
 
-## Arrays
+
+
+##  JAVASCRIPT
+
+###### 跳转、新窗口
+
+```js
+//新窗口打开
+window.open('baidu.com')
+
+//button href
+onclick="location.href='https://google.com';"
+
+//打开新的迷你窗口
+window.open("https://www.baidu.com","newWindow","width=600,height=700")
+```
+
+###### sleep
+
+```js
+// sleep time expects milliseconds
+function sleep(time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+// Usage!
+sleep(500).then(() => {
+  // Do something after the sleep!
+});
+```
+
+###### 设置元素属性
+
+```js
+document.getElementById("p2").style.color = "blue";
+//设置css属性
+document.getElementById('a4').classList.add/remove('classname');
+//给元素添加、删除类
+document.getElementById('reply_content').value='';
+//获取内容
+```
+
+###### 滚动
+
+```js
+//滚动到底部
+window.scrollTo({top: document.body.scrollHeight,behavior: 'smooth'});
+//滚动道顶部
+window.scrollTo({top: 0,behavior: 'smooth'});
+//闪现到底部
+window.scrollTo(0,document.body.scrollHeight);
+```
+
+# arrow function
+
+![image-20210521141117294](/home/muder/code/hack-rank/JavaScript/readme.assets/image-20210521141117294.png)
+
+![image-20210521141220618](/home/muder/code/hack-rank/JavaScript/readme.assets/image-20210521141220618.png)
 

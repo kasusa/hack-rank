@@ -43,3 +43,16 @@ let y = x;
 var z = 10;
 
 console.log('\a');
+
+// sleep time expects milliseconds
+function sleep(time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+// Usage!
+
+
+for (var i = 0; i < 99; i++) {
+    document.body.innerHTML = i;
+    sleep(500);
+}
